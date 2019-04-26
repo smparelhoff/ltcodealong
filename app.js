@@ -14,6 +14,8 @@ app.use(express.static(path.join(__dirname, "./public")))
 
 app.use('/', router)
 
+//Here would be a good place to add some 404-handling middleware ;)
+
 app.use((err, req, res, next) => {
   console.error(err)
   res.status(500).send("Uh! Something broke!")
